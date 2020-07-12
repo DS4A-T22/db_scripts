@@ -20,8 +20,10 @@ CREATE TABLE vaccination(
 CREATE TABLE Act_Disaggregated(
     id_patient: INTEGER NOT NULL,
     id_record: INTEGER NOT NULL,
-    surver_name: VARCHAR(50) NOT NULL,
-    Question_test: INTEGER NOT NULL,
-    Result: VARCHAR(50) NOT NULL,
-    Result_Date: DATE NOT NULL
+    survey_name: VARCHAR(50) NOT NULL,    
+    A_ACT: VARCHAR(50),
+    B_ACT: VARCHAR(50),
+    C_ACT: VARCHAR(50),
+    D_ACT: VARCHAR(50),
+    FEEDBACK: VARCHAR(50), 
 );
