@@ -1,8 +1,8 @@
 CREATE TABLE Adherence(
     id_patient INTEGER NOT NULL,
     survey_date DATE NOT NULL,
-    qualitative_result SET(val1,val2),
-    quantitative_result SET(val1,val2,val3,val4)
+    qualitative_result VARCHAR(50) NOT NULL,
+    quantitative_result VARCHAR(50) NOT NULL,
 );
 
 CREATE TABLE Pathologies(
