@@ -23,9 +23,9 @@ CREATE TABLE Family_Records(
     id_patient INTEGER NOT NULL,
     health_provider VARCHAR(100) NOT NULL,
     creation_date DATE NOT NULL,
-    diagnosis VARCHAR(50) NOT NULL,
-    diagnosis_code VARCHAR(50) NOT NULL,
-    relationship VARCHAR(100),
+    diagnosis VARCHAR(150) NOT NULL,
+    diagnosis_code VARCHAR(150) NOT NULL,
+    relationship VARCHAR(150),
     record_year INTEGER NOT NULL
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE Well_Being_Records(
     id_record SERIAL NOT NULL,
     id_patient INTEGER NOT NULL,
     creation_date DATE NOT NULL,
-    dimension VARCHAR(50) NOT NULL,
+    dimension VARCHAR(100) NOT NULL,
     score NUMERIC NOT NULL
 );
 
