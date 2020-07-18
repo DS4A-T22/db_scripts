@@ -10,7 +10,7 @@ CREATE TABLE Patients(
     department VARCHAR(50),
     city VARCHAR(50),
     zone VARCHAR(50),
-    social_stratum INTEGER,
+    social_stratum NUMERIC,
     socioeconomic_level VARCHAR(50),
     social_security_regime VARCHAR(50),
     social_security_affiliation_type VARCHAR(50),
@@ -19,7 +19,7 @@ CREATE TABLE Patients(
 );
 
 CREATE TABLE Family_Records(
-    id_record INTEGER NOT NULL,
+    id_record SERIAL NOT NULL,
     id_patient INTEGER NOT NULL,
     health_provider VARCHAR(100) NOT NULL,
     creation_date DATE NOT NULL,
@@ -30,13 +30,13 @@ CREATE TABLE Family_Records(
 );
 
 CREATE TABLE Well_Being_Records(
-    id_record INTEGER NOT NULL,
+    id_record SERIAL NOT NULL,
     id_patient INTEGER NOT NULL,
     creation_date DATE NOT NULL,
     dimension VARCHAR(50) NOT NULL,
     score NUMERIC NOT NULL
 );
 
--- \copy Patients FROM 'data/cleansed/datos_basicos.csv' with (format CSV, header true, delimiter '|');
+-- \copy Patients FROM 'data/cleansed/datos_basicos_con_nombres.csv' with (format CSV, header true, delimiter '|');
 -- \copy Family_Records FROM 'data/cleansed/antecedentes_familiares.csv' with (format CSV, header true, delimiter '|');
 -- \copy Well_Being_Records FROM 'data/cleansed/calidad_de_vida.csv' with (format CSV, header true, delimiter '|');
