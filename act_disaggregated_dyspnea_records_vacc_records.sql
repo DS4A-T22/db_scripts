@@ -27,3 +27,7 @@ CREATE TABLE Act_Disaggregated(
     D_ACT VARCHAR(50),
     FEEDBACK VARCHAR(50), 
 );
+
+--copy product from 'data/cleansed/Adher.csv' with (format CSV, header true, delimiter '|'); 
+--copy product from 'data/cleansed/disnea.csv' with (format CSV, header true, delimiter '|');
+--copy product from 'data/cleansed/Vacc.csv' with (format CSV, header true, delimiter '|');
