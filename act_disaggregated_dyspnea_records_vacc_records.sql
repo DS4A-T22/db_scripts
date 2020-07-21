@@ -2,7 +2,7 @@ CREATE TABLE dyspnea(
     id_record SERIAL NOT NULL,
     id_patient INTEGER NOT NULL, 
     discharge_date DATE NOT NULL,
-    medical_test INTEGER NOT NULL,
+    medical_test INTEGER NOT NULL
 );
 
 CREATE TABLE vaccination(
@@ -25,7 +25,7 @@ CREATE TABLE Act_Disaggregated(
     B_ACT VARCHAR(50),
     C_ACT VARCHAR(50),
     D_ACT VARCHAR(50),
-    FEEDBACK VARCHAR(50), 
+    FEEDBACK VARCHAR(50)
 );
 
 --copy dyspnea from 'data/cleansed/disnea.csv' with (format CSV, header true, delimiter '|'); 
