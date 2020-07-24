@@ -12,7 +12,7 @@ CREATE TABLE vaccination(
     regional_eps VARCHAR(50),
     eps_code VARCHAR(50),
     service_description VARCHAR(100),
-    diagnostic_eps_code INTEGER NOT NULL,
+    diagnostic_eps_code VARCHAR(50),
     diagnostic_eps_description VARCHAR(100) NOT NULL,
     auth_quantity INTEGER NOT NULL
 );
@@ -20,7 +20,8 @@ CREATE TABLE vaccination(
 CREATE TABLE Act_Disaggregated(
     id_record SERIAL NOT NULL,
     id_patient INTEGER NOT NULL,
-    survey_name VARCHAR(50) NOT NULL,    
+    survey_name VARCHAR(50) NOT NULL, 
+    result_date DATE NOT NULL,
     A_ACT VARCHAR(50),
     B_ACT VARCHAR(50),
     C_ACT VARCHAR(50),
