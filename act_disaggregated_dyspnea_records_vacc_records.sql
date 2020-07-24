@@ -10,7 +10,7 @@ CREATE TABLE vaccination(
     id_patient INTEGER NOT NULL,
     emission_date DATE NOT NULL,
     regional_eps VARCHAR(50),
-    eps_code INTEGER NOT NULL,
+    eps_code VARCHAR(50),
     service_description VARCHAR(100),
     diagnostic_eps_code INTEGER NOT NULL,
     diagnostic_eps_description VARCHAR(100) NOT NULL,
@@ -28,6 +28,6 @@ CREATE TABLE Act_Disaggregated(
     FEEDBACK VARCHAR(50)
 );
 
---copy dyspnea from 'data/cleansed/disnea.csv' with (format CSV, header true, delimiter '|'); 
---copy vaccination from 'data/cleansed/vacc.csv' with (format CSV, header true, delimiter '|');
---copy Act_Disaggregated from 'data/cleansed/act_desagregado.csv' with (format CSV, header true, delimiter '|');
+--copy dyspnea from 'data/cleansed/disnea.csv' with (format CSV, header true, delimiter ','); 
+--copy vaccination from 'data/cleansed/vacc.csv' with (format CSV, header true, delimiter ',');
+--copy Act_Disaggregated from 'data/cleansed/act_desagregado.csv' with (format CSV, header true, delimiter ',');
