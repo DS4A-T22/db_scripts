@@ -19,20 +19,24 @@ CREATE TABLE vaccination(
 
 CREATE TABLE Act_Disaggregated(
     id_record SERIAL NOT NULL,
-<<<<<<< HEAD
-    id_patient INTEGER NOT NULL,  
-=======
-    id_patient INTEGER NOT NULL,
-    survey_name VARCHAR(50) NOT NULL, 
-    result_date DATE NOT NULL,
->>>>>>> 7205de929c5b1adce9eefe5197b84243895d933b
-    A_ACT VARCHAR(50),
-    B_ACT VARCHAR(50),
-    C_ACT VARCHAR(50),
-    D_ACT VARCHAR(50),
-    FEEDBACK VARCHAR(50)
+    id_patient INTEGER NOT NULL, 
+    result_date DATE NOT NULL, 
+    A_ACT INTEGER NOT NULL,
+    B_ACT INTEGER NOT NULL,
+    C_ACT INTEGER NOT NULL,
+    D_ACT INTEGER NOT NULL,
+    FEEDBACK INTEGER NOT NULL
+);
+
+CREATE TABLE Act(
+    id_record SERIAL NOT NULL,
+    id_patient INTEGER NOT NULL, 
+    act_score INTEGER NOT NULL, 
+    result INTEGER NOT NULL,
+    date_result DATE NOT NULL
 );
 
 --copy dyspnea from 'data/cleansed/disnea.csv' with (format CSV, header true, delimiter ','); 
 --copy vaccination from 'data/cleansed/vacc.csv' with (format CSV, header true, delimiter ',');
 --copy Act_Disaggregated from 'data/cleansed/act_desagregado.csv' with (format CSV, header true, delimiter ',');
+--copy Act from 'data/cleansed/act.csv' with (format CSV, header true, delimiter ',');
